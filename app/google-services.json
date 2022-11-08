@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "890193226442",
+    "firebase_url": "https://fixurfonedb-13557-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fixurfonedb-13557",
+    "storage_bucket": "fixurfonedb-13557.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890193226442:android:e5929d01142eaefeb92233",
+        "android_client_info": {
+          "package_name": "com.example.fixurfonemobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890193226442-1kmsaisnmhbnaiv2lpstr7jq903njk0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlAnk13RZVv8S7Sx3S4El9Vm9VkWYoJhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890193226442-1kmsaisnmhbnaiv2lpstr7jq903njk0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="whitesmoke">#F5F5F5</color>
+    <color name="fromMsgColor">#4d4dff</color>
+    <color name="sendMsgColor">#c7c7ff</color>
+    <color name="msgPrimary">#0a2371</color>
+    <color name="msgItem">#e5e5ff</color>
+    <color name="msgBtn">#6161ff</color>
+    <color name="msgBtnTouch">#8e8ee6</color>
+    <color name="lightblue">#3366ff</color>
+    <color name="danger">#dc3545</color>
+    <color name="gray">#d6d6d6</color>
+    <color name="darkgray">#9c9c9c</color>
+    <color name="halfTrans">#99ffffff</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="webprimary">#e03a3c</color>
+    <color name="websecondary">#D13133</color>
 </resources>
