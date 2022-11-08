@@ -2,8 +2,8 @@
 <layout>
     <data>
         <variable
-            name="record"
-            type="com.example.fixurfonemobile.model.Reservation" />
+            name="reservationItemViewModel"
+            type="com.example.fixurfonemobile.ReservationItemViewModel" />
     </data>
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
