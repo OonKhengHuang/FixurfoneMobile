@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1145" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/icon.xml" value="0.236" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/passwordicon.xml" value="0.236" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/rounded_corner.xml" value="0.236" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/activity_record.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/activity_reservation_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/fragment_record.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/fragment_reservation_list.xml" value="0.264" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/record_list_item.xml" value="0.4" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/reservation_list_item.xml" value="0.1" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/menu/bottom_navigation.xml" value="0.25416666666666665" />
       </map>
     </option>

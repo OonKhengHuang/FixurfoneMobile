@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ReservationDetails">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            tools:context=".customer.TransactionDetail">
+
+            <TextView
+                style="@style/Header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+                android:text="@string/details"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="231dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reservation_id" />
+
+                <TextView
+                    android:id="@+id/reserveID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="640e7e07-4bec-4053-813c-baf1eaa74080" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/booking_date"
+                style="@style/transDetailsTitle" />
+
+            <TextView
+                android:id="@+id/bookingDate"
+                tools:text="6 Apr 2022 12:56:17 am"
+                style="@style/transDetailsFont" />
+            <TextView
+                android:text="@string/booking_time"
+                style="@style/transDetailsTitle" />
+
+            <TextView
+                android:id="@+id/bookingTime"
+                tools:text="2.00Pm - 3.00PM"
+                style="@style/transDetailsFont" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsTitle"
+                android:text="Phone Model" />
+
+            <TextView
+                android:id="@+id/phoneModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsFont"
+                tools:text="Samsung Galaxy S7 Edge" />
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsTitle"
+                android:text="Remark"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/remark1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsFont"
+                tools:text="XXXX"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsTitle"
+                android:text="@string/repair_status" />
+
+            <TextView
+                android:id="@+id/repairStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsFont"
+                tools:text="Pending" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsTitle"
+                android:text="Service Type" />
+
+            <TextView
+                android:id="@+id/serviceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsFont"
+                tools:text="Battery Replacement" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsTitle"
+                android:text="@string/status" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/transDetailsFont"
+                tools:text="Completed" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/red"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="@dimen/medium_padding"
+                android:text="@string/back" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

@@ -21,6 +21,7 @@
     <color name="halfTrans">#99ffffff</color>
     <color name="red">#F44336</color>
     <color name="green">#4CAF50</color>
+    <color name="yellow">#ECB40C</color>
     <color name="webprimary">#e03a3c</color>
     <color name="websecondary">#D13133</color>
 </resources>

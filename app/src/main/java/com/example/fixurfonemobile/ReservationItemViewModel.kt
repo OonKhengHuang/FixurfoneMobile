@@ -7,7 +7,7 @@ import com.example.fixurfonemobile.model.Reservation
 import com.google.firebase.database.*
 
 
-class ReservationItemViewModel (database: FirebaseDatabase, app: Application, private val reservationID: String): ViewModel() {
+class ReservationItemViewModel (database: FirebaseDatabase, app: Application, private val custID: String): ViewModel() {
     private val db = database
     private val _navigateToItemDetails = MutableLiveData<String?>()
     val navigateToItemDetails
@@ -25,45 +25,6 @@ class ReservationItemViewModel (database: FirebaseDatabase, app: Application, pr
     }
 
     private fun getData() {
-//        val listRef = db.getReference().
-//            .whereEqualTo("RestaurantID", restaurantID).whereEqualTo("FoodStatus", "On Sale")
-//            .addSnapshotListener() { documents, e ->
-//                val foodList: MutableList<Food> = mutableListOf()
-//                for (document in documents!!) {
-//                    var foodItem= Food(
-//                        "tempsave", "tempsave", 0.0, 0, "tempsave",
-//                        "test", "tempsave", "tempsave","tempsave")
-//
-//                    if (document.data != null && document.exists()) {
-//
-//                        val foodData = Food(
-//                            document.data!!["FoodStatus"].toString(),
-//                            document.data!!["FoodName"].toString(),
-//                            document.data!!["FoodPrice"].toString().toDouble(),
-//                            document.data!!["FoodDiscount"].toString().toInt(),
-//                            document.data!!["FoodDescription"].toString(),
-//                            document.data!!["FoodType"].toString(),
-//                            document.data!!["FoodID"].toString(),
-//                            document.data!!["RestaurantID"].toString(),
-//                            document.data!!["Profile"].toString()
-//                        )
-//
-//                        if (foodList.contains(foodItem)) {
-//                            foodList.remove(foodItem)
-//                            foodItem = foodData
-//                            foodList.add(foodData)
-//                        } else {
-//                            foodItem = foodData
-//                            foodList.add(foodData)
-//                        }
-//                        foodList.sortBy { it.foodID }
-//
-//                    }
-//
-//                    mutableData.value = foodList
-//                }
-//                containResult.value = documents.size() != 0
-//            }
         val reserveList: MutableList<Reservation> = mutableListOf()
         var dbRef:DatabaseReference = FirebaseDatabase.getInstance().getReference("Reservation")
         dbRef.addValueEventListener(object: ValueEventListener{
@@ -72,15 +33,21 @@ class ReservationItemViewModel (database: FirebaseDatabase, app: Application, pr
                 {
                     for(v in snapshot.children)
                     {
-
-//                        var reserveData = Reservation("", "","",Calendar.getInstance().getTime() ,Calendar.getInstance().getTime(),"", arrayOf<String>(),
-//                        "","","","")
                         var reserveData = v.getValue(Reservation::class.java)
-                        reserveList.add(reserveData!!)
-                        mutableData.value = reserveList
+                        if(reserveData?.custID == custID){
+                            reserveList.add(reserveData!!)
+                            mutableData.value = reserveList
+                        }
                     }
+                    containResult.value = true
 
+                }else{
 
+                    containResult.value = false
+                }
+                if(reserveList.size <= 0)
+                {
+                    containResult.value = false
                 }
             }
 

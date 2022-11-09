@@ -2,4 +2,15 @@
     <string name="app_name">FIXURFONE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="details">Details</string>
+    <string name="reservation_id">Reservation ID</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="booking_time">Booking Time</string>
+    <string name="repair_status">Repair Status</string>
+    <string name="status">Status</string>
+    <string name="back">Back</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="reservation">Reservation</string>
 </resources>

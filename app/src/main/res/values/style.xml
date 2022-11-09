@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Header1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="margin10px">
         <item name="android:layout_marginTop">10px</item>
         <item name="android:layout_marginEnd">10px</item>
@@ -9,6 +18,7 @@
     <style name="transactionItemfont">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/alata</item>
         <item name="android:textSize">20sp</item>
     </style>
     <style name="roundedImage" parent="">
@@ -20,8 +30,44 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">@font/alata</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+    <style name="transDetailsTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/whitesmoke</item>
+    </style>
+    <style name="transDetailsFont">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+    <style name="editTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableLeft">@drawable/icon</item>
+        <item name="android:drawablePadding">@dimen/medium_padding</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:padding">@dimen/medium_padding</item>
+        <item name="android:paddingLeft">48dp</item>
+        <item name="android:paddingRight">36dp</item>
+    </style>
+    <style name="bodyTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
     </style>
 </resources>

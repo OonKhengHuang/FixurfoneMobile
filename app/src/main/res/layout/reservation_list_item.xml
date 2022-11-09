@@ -20,61 +20,58 @@
             android:layout_marginBottom="5dp"
             android:onClick="@{() -> clickListener.onClick(reserve)}" >
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/restaurantIcon"
-                android:layout_marginStart="20dp"
-                style="@style/margin10px"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="50dp"
-                android:orientation="horizontal"
-                app:shapeAppearanceOverlay="@style/roundedImage"
-                tools:src="@drawable/ic_baseline_person_24" />
-
             <TextView
-                android:id="@+id/restaurantName"
+                android:id="@+id/phoneModel"
                 style="@style/transactionItemfont"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_toRightOf="@id/restaurantIcon"
-                tools:text="Tealive Gurney Plaza" />
+                tools:text="Samsung Galaxy S7" />
 
 
             <TextView
-                android:id="@+id/totalAmount"
+                android:id="@+id/serviceType"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/restaurantName"
-                android:layout_toRightOf="@id/restaurantIcon"
-                android:layout_marginLeft="20dp"
+                android:layout_below="@id/phoneModel"
                 android:layout_marginRight="20dp"
-                tools:text="Total Price: RM36.00" />
+                tools:text="Battery Replacement, ..." />
 
             <TextView
-                android:id="@+id/orderDate"
+                android:id="@+id/bookingDate"
                 style="@style/transactionItemfont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/totalAmount"
+                android:layout_below="@id/serviceType"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_toRightOf="@id/restaurantIcon"
-                android:text="10.20 a.m."
+                tools:text="20/12/2023"
                 android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_below="@id/orderDate"
+                android:layout_below="@id/bookingDate"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceType"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/yellow"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="PENDING" />
+
         </RelativeLayout>
 
     </FrameLayout>
