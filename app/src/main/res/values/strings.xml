@@ -13,4 +13,25 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="reservation">Reservation</string>
+    <string name="appointment">Appointment</string>
+    <string name="select_booking_date">Select Booking Date</string>
+    <string name="phone_model">Phone Model</string>
+    <string name="enter_phone_model">Enter Phone Model</string>
+    <string name="remark">Remark</string>
+    <string name="book">Book</string>
+    <string name="prblem_issues">Prblem/ Issues</string>
+    <string name="remark_if_any">Remark (If any)</string>
+    <string name="select">Select</string>
+    <string name="problem_issues">Problem/ Issues</string>
+    <string name="warning">Warning</string>
+    <string name="product">Product</string>
+    <string name="brand">Brand</string>
+    <string name="device">Device</string>
+    <string name="board">Board</string>
+    <string name="bootloader">Bootloader</string>
+    <string name="display">Display</string>
+    <string name="hardware">Hardware</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="model">Model</string>
+    <string name="user">User</string>
 </resources>

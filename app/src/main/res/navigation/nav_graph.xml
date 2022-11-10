@@ -9,4 +9,14 @@
         android:id="@+id/nav_record"
         android:name="com.example.fixurfonemobile.ReservationList"
         android:label="Record" />
+    <fragment
+        android:id="@+id/nav_addReserve"
+        android:name="com.example.fixurfonemobile.AddReservation"
+        android:label="Add Reservation"
+        tools:layout="@layout/fragment_add_reservation" />
+    <fragment
+        android:id="@+id/nav_deviceInfo"
+        android:name="com.example.fixurfonemobile.DeviceInfo"
+        android:label="Device Info"
+        tools:layout="@layout/fragment_device_info" />
 </navigation>

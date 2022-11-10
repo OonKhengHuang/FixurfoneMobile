@@ -5,10 +5,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.fixurfonemobile.database.ReservationDB
 import com.example.fixurfonemobile.databinding.ActivityReservationDetailsBinding
 import com.example.fixurfonemobile.model.DateTimeParser
+import com.example.fixurfonemobile.model.GetTodayDate
 import com.example.fixurfonemobile.model.Reservation
 import com.google.firebase.database.FirebaseDatabase
 
@@ -52,6 +56,11 @@ class ReservationDetails : AppCompatActivity() {
                 binding.remark.visibility = View.VISIBLE
                 binding.remark1.visibility = View.VISIBLE
             }
+            var datetoday = GetTodayDate()
+            if(reserve.bookingDate!! <= datetoday.getTodayDate())
+            {
+                binding.btnDelete.visibility = View.GONE
+            }
 
         }.addOnFailureListener {
             //operation upon the failure condition
@@ -61,9 +70,33 @@ class ReservationDetails : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             val intent =
                 Intent(this, MainActivity::class.java)
-//            intent.putExtra("sellerID", sellerID)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
+        }
+
+        binding.btnDelete.setOnClickListener{
+            val view = View.inflate(this, R.layout.delete_reservation_dialog, null)
+            val builder = AlertDialog.Builder(this)
+            builder.setView(view)
+
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            var btnCancel: Button = view.findViewById(R.id.btn_cancel)
+            var btnOkay: Button = view.findViewById(R.id.btn_okay)
+            btnCancel.setOnClickListener{
+                dialog.dismiss()
+            }
+
+            btnOkay.setOnClickListener{
+                var reserveDB = ReservationDB()
+                reserveDB.deleteReservation(reserveID)
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+
+            }
+
         }
     }
 

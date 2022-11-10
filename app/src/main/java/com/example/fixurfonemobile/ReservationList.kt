@@ -83,10 +83,12 @@ class ReservationList : Fragment() {
         })
         binding.lifecycleOwner = this
         binding.swipeRefreshLayout.setOnRefreshListener {
-            TODO("Pull to refresh")
+
             // on below line we are setting is refreshing to false.
             binding.swipeRefreshLayout.isRefreshing = false
-            binding.reservationListRecycle.adapter?.notifyDataSetChanged()
+            val intent = Intent(activity, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent)
 
         }
         return binding.root

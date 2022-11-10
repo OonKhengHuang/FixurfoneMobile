@@ -10,6 +10,10 @@
         android:icon="@drawable/ic_baseline_add_circle_outline_24"
         android:title="Add Reservation" />
     <item
+        android:id="@+id/nav_deviceInfo"
+        android:icon="@drawable/ic_baseline_perm_device_information_24"
+        android:title="Device Info" />
+    <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile" />

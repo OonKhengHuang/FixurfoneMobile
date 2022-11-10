@@ -129,13 +129,22 @@
             <Button
                 android:id="@+id/btnBack"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/red"
+                android:backgroundTint="@color/lightblue"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="@dimen/medium_padding"
                 android:text="@string/back" />
-
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/red"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="@dimen/medium_padding"
+                android:layout_marginBottom="30dp"
+                android:text="Cancel Booking" />
 
         </LinearLayout>
     </ScrollView>
