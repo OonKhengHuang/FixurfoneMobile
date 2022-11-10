@@ -76,7 +76,7 @@ class AddReservation : Fragment() {
                     deviceList.add("Others")
 
                     val spinner = binding.spinnerPhoneModel
-                    val arrayAdapter = ArrayAdapter<String>(activity?.applicationContext!!,android.R.layout.simple_spinner_dropdown_item,deviceList)
+                    val arrayAdapter = ArrayAdapter<String>(activity?.application!!,android.R.layout.simple_spinner_dropdown_item,deviceList)
                     spinner.adapter = arrayAdapter
                     spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
                         override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -84,6 +84,8 @@ class AddReservation : Fragment() {
                             deviceSelected = deviceList[p2]
                             if(deviceSelected == "Others"){
                                 binding.phoneModel.visibility = View.VISIBLE
+                            }else{
+                                binding.phoneModel.visibility = View.GONE
                             }
                         }
 
@@ -126,7 +128,14 @@ class AddReservation : Fragment() {
             if(valid){
                 val fomatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US)
                 val date = fomatter.format(cal.timeInMillis)
-                val phone = binding.phoneModel.text.toString()
+                var phone = ""
+                if(deviceSelected == "Others"){
+                    phone =binding.phoneModel.text.toString()
+                }else
+                {
+                    phone = deviceSelected
+                }
+
                 val time = timeSelected
                 var remark = ""
                 var serviceType: MutableList<String> = mutableListOf()
@@ -189,8 +198,11 @@ class AddReservation : Fragment() {
         }
 
         if( TextUtils.isEmpty(binding.phoneModel.text.toString())){
-            binding.phoneModel.setError( "Phone Model is required!" )
-            valid = valid && false
+            if(deviceSelected == "Others")
+            {
+                binding.phoneModel.setError( "Phone Model is required!" )
+                valid = valid && false
+            }
         }
 
         if(binding.screen.isChecked || binding.battery.isChecked)

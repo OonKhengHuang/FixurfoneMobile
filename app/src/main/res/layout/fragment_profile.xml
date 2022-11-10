@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profile">
+    <ScrollView
+        android:id="@+id/myNavHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profilepic" />
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/deviceInfoFont"
+                    tools:text="test" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/deviceInfoFont"
+                    tools:text="test" />
+
+
+                    <View
+                        android:layout_below="@id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/black"/>
+                    <RelativeLayout
+                        android:id="@+id/viewDeviceAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_baseline_devices_24" />
+                        <TextView
+                            android:id="@+id/viewDevice"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toRightOf="@id/imageView2"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:text="View Registered Device"
+                            android:textSize="16sp" />
+                        <View
+                            android:layout_below="@id/viewDevice"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@color/black"/>
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/viewAboutUsAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_baseline_question_mark_24" />
+                        <TextView
+                            android:id="@+id/viewAbout"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toRightOf="@id/imageView4"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:text="About Us"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_below="@id/viewAbout"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@color/black"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/logoutAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_baseline_logout_24" />
+                        <TextView
+                            android:id="@+id/logout"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toRightOf="@id/imageView3"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:text="Log Out"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_below="@id/logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@color/black"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+    </ScrollView>
+</layout>

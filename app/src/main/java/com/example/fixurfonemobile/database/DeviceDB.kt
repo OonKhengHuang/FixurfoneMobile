@@ -8,8 +8,8 @@ class DeviceDB {
     private var db: FirebaseDatabase = FirebaseDatabase.getInstance()
 
     fun addDevice(device: Device){
-        val deviceID = device.deviceID
-        db.getReference().child("Device").push().setValue(device)
+        val deviceID = device.deviceID!!
+        db.getReference("Device").child(deviceID.replace(".","")).setValue(device)
             .addOnFailureListener {
                 Log.e("Firebase", "Error in loading the file: ${it.toString()}")
 
@@ -17,7 +17,7 @@ class DeviceDB {
     }
 
     fun deleteDevice(deviceID: String){
-        db.getReference("Devicce").child(deviceID!!).removeValue()
+        db.getReference("Device").child(deviceID.replace(".","")).removeValue()
             .addOnFailureListener {
                 Log.e("Firebase", "Error in loading the file: ${it.toString()}")
 

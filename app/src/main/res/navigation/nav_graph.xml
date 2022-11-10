@@ -19,4 +19,9 @@
         android:name="com.example.fixurfonemobile.DeviceInfo"
         android:label="Device Info"
         tools:layout="@layout/fragment_device_info" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.fixurfonemobile.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

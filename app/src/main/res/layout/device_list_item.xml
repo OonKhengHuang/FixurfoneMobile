@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="device"
+            type="com.example.fixurfonemobile.model.Device" />
+        <variable
+            name="clickListener"
+            type="com.example.fixurfonemobile.adapter.DeviceItemListListener" />
+    </data>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="@{() -> clickListener.onClick(device)}" >
+
+            <TextView
+                android:id="@+id/deviceName"
+                style="@style/transactionItemfont"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                tools:text="Samsung Galaxy S7" />
+
+
+            <TextView
+                android:id="@+id/manufacturer"
+                style="@style/transactionItemfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deviceName"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                tools:text="Samsung"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/manufacturer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/black" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>

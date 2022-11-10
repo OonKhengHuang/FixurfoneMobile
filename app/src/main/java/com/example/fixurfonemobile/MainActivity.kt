@@ -43,17 +43,8 @@ class MainActivity : AppCompatActivity() {
             ActivityCompat.finishAffinity(this)
         }
 
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-
-//        db = FirebaseDatabase.getInstance()
-//
-//
-//        db.getReference("Customer").child("CT185f2acbd0f343709aec61aba46dd160").get().addOnSuccessListener {
-//            val cust = it.getValue(Customer::class.java)
-//            binding.txtTest.text = cust?.email.toString()
-//        }
 
     }
+
 
 }

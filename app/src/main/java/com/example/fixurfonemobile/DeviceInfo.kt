@@ -17,12 +17,14 @@ import com.example.fixurfonemobile.database.DeviceDB
 import com.example.fixurfonemobile.databinding.FragmentDeviceInfoBinding
 import com.example.fixurfonemobile.model.*
 import com.google.firebase.database.*
+import com.jaredrummler.android.device.DeviceName
 
 
 class DeviceInfo : Fragment() {
     private lateinit var custID:String
     private lateinit var binding: FragmentDeviceInfoBinding
     private lateinit var db:FirebaseDatabase
+    private lateinit var deviceN:String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +43,10 @@ class DeviceInfo : Fragment() {
             startActivity(intent)
             ActivityCompat.finishAffinity(this.requireActivity())
         }
+
+        DeviceName.init(this.requireContext())
+        deviceN = DeviceName.getDeviceName()
+        binding.deviceName.text = deviceN
         binding.Pid.text = Build.ID
         binding.product.text = Build.PRODUCT
         binding.brand.text = Build.BRAND
@@ -89,8 +95,8 @@ class DeviceInfo : Fragment() {
         })
 
         binding.register.setOnClickListener {
-            var deviceN = DeviceName()
-            var device = Device(Build.ID, custID, Build.PRODUCT,Build.BRAND, Build.DEVICE,deviceN.getDeviceName(), Build.BOARD,Build.BOOTLOADER,
+
+            var device = Device(Build.ID, custID, Build.PRODUCT,Build.BRAND, Build.DEVICE,deviceN, Build.BOARD,Build.BOOTLOADER,
                 Build.DISPLAY,Build.HARDWARE,Build.MANUFACTURER,Build.MODEL,Build.VERSION.SDK)
             var deviceDB = DeviceDB()
             deviceDB.addDevice(device)

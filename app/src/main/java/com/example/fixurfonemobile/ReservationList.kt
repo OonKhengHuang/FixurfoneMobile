@@ -43,6 +43,7 @@ class ReservationList : Fragment() {
         }
 
 
+        //*************************************************** Recycle View *************************************************************
         var application = requireNotNull(this.activity).application
         var adapter =  ReservationItemListAdapter( ReservationItemListListener {
 

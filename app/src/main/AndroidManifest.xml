@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FixurfoneMobile">
         <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".DeviceDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ViewDeviceList"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="true"
             android:theme="@style/Theme.FixurfoneMobile.NoActionBar">
@@ -30,7 +39,7 @@
             tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
