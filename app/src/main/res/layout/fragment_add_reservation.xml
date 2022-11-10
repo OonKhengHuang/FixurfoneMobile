@@ -115,7 +115,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/rounded_corner"
                     android:ems="10"
-                    android:hint="@string/enter_phone_model"
+                    android:hint="Enter remark if any"
                     android:inputType="textPersonName"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp" />
