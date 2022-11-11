@@ -52,7 +52,7 @@ class Login : AppCompatActivity() {
                             for(v in snapshot.children)
                             {
                                 var custData = v.getValue(Customer::class.java)
-                                if(custData?.email == email && custData?.password == password){
+                                if(custData?.email == email.trim() && custData?.password == password.trim()){
                                     custID = custData.custID!!
                                 }
                             }

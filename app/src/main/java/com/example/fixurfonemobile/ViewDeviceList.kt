@@ -26,6 +26,7 @@ class ViewDeviceList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_view_device_list)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //Get data from login shared preferences
         val sharedPrefFile = "loginSharedPreferences"
         val sharedPreferences: SharedPreferences =

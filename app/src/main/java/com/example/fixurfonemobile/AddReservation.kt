@@ -175,7 +175,7 @@ class AddReservation : Fragment() {
         }
 
         binding.bookingDate.setOnClickListener{
-            DatePickerDialog(this.requireContext(),
+            DatePickerDialog(this.requireContext(),R.style.DialogTheme,
                 dateSetListener,
                 // set DatePickerDialog to point to today's date when it loads up
                 cal.get(Calendar.YEAR),
