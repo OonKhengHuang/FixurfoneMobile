@@ -78,7 +78,12 @@
         <item name="android:textStyle"></item>
         <item name="android:layout_marginBottom">15dp</item>
     </style>
-    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
         <item name="colorAccent">@color/webprimary</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TextButton</item>
+    </style>
+    <style name="TextButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/webprimary</item>
+        <item name="backgroundTint">@color/webprimary</item>
     </style>
 </resources>
