@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.fixurfonemobile.database.CustomerDB
 import com.example.fixurfonemobile.databinding.ActivityLoginBinding
 import com.example.fixurfonemobile.model.Customer
+import com.example.fixurfonemobile.model.PasswordHash
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -41,9 +42,9 @@ class Login : AppCompatActivity() {
 
             var email = binding.editTextEmail.text.toString()
             var password = binding.editTextPassword.text.toString()
+            var hash = PasswordHash()
 
-
-            if (email != "" && email != null) {
+            if (email != "" && email != null && password != "" && password != null) {
                 var custID:String = ""
                 db.getReference("Customer").addValueEventListener(object: ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -52,7 +53,8 @@ class Login : AppCompatActivity() {
                             for(v in snapshot.children)
                             {
                                 var custData = v.getValue(Customer::class.java)
-                                if(custData?.email == email.trim() && custData?.password == password.trim()){
+                                var passbyte = password.trim() + custData?.salt
+                                if(custData?.email == email.trim() && custData?.password == hash.encryptSHA(passbyte)){
                                     custID = custData.custID!!
                                 }
                             }
@@ -66,8 +68,18 @@ class Login : AppCompatActivity() {
 
 
             } else {
-                binding.loginEmailError.visibility = View.VISIBLE
-                binding.loginEmailError.text = "Email cannot be left empty!"
+                if(email == "" || email == null)
+                {
+                    binding.loginEmailError.visibility = View.VISIBLE
+                    binding.loginEmailError.text = "Email cannot be empty!"
+                }
+               if(password == "" || password == null)
+               {
+                   binding.loginError.visibility = View.VISIBLE
+                   binding.loginEmailError.text = "Password cannot be empty!"
+               }
+
+
             }
 
         }

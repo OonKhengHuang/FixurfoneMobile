@@ -10,6 +10,7 @@ data class Customer (
     var email: String? = null,
     var password: String? = null,
     var status: Int? = 0,
-    var profilePic: String? = null
+    var profilePic: String? = null,
+    var salt: String? = null
 
 )
