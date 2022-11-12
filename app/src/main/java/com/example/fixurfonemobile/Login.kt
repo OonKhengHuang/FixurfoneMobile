@@ -45,6 +45,8 @@ class Login : AppCompatActivity() {
             var hash = PasswordHash()
 
             if (email != "" && email != null && password != "" && password != null) {
+                binding.loginEmailError.visibility = View.GONE
+                binding.loginError.visibility = View.GONE
                 var custID:String = ""
                 db.getReference("Customer").addValueEventListener(object: ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -76,7 +78,7 @@ class Login : AppCompatActivity() {
                if(password == "" || password == null)
                {
                    binding.loginError.visibility = View.VISIBLE
-                   binding.loginEmailError.text = "Password cannot be empty!"
+                   binding.loginError.text = "Password cannot be empty!"
                }
 
 
