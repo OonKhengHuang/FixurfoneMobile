@@ -129,16 +129,34 @@
                     android:textStyle="bold" />
 
                 <CheckBox
+                    android:id="@+id/screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Screen Service" />
+
+                <CheckBox
                     android:id="@+id/battery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Battery Replacement" />
 
                 <CheckBox
-                    android:id="@+id/screen"
+                    android:id="@+id/camera"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Screen Service" />
+                    android:text="Camera Replacement" />
+
+                <CheckBox
+                    android:id="@+id/speaker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Speaker/Microphone" />
+
+                <CheckBox
+                    android:id="@+id/others"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Others" />
 
                 <Button
                     android:id="@+id/submit"

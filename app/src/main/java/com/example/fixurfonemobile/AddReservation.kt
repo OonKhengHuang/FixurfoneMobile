@@ -151,6 +151,18 @@ class AddReservation : Fragment() {
                 {
                     serviceType.add("Screen Service")
                 }
+                if(binding.camera.isChecked)
+                {
+                    serviceType.add("Camera Replacement")
+                }
+                if(binding.speaker.isChecked)
+                {
+                    serviceType.add("Speaker/Microphone")
+                }
+                if(binding.others.isChecked)
+                {
+                    serviceType.add("Others")
+                }
                 var datenow: GetTodayDate = GetTodayDate()
                 val reserve = Reservation("RE"+ UUID.randomUUID().toString().replace("-",""),custID,null,datenow.getTodayDate(),
                     date, time,serviceType,phone,if(remark == "") null else remark,"Pending","Pending")
@@ -205,7 +217,7 @@ class AddReservation : Fragment() {
             }
         }
 
-        if(binding.screen.isChecked || binding.battery.isChecked)
+        if(binding.screen.isChecked || binding.battery.isChecked || binding.camera.isChecked || binding.speaker.isChecked || binding.others.isChecked)
         {
             valid = valid && true
 
