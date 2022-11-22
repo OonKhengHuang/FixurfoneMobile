@@ -11,7 +11,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.fixurfonemobile.database.CustomerDB
-import com.example.fixurfonemobile.database.ReservationDB
 import com.example.fixurfonemobile.databinding.ActivitySignUpBinding
 import com.example.fixurfonemobile.model.Customer
 import com.example.fixurfonemobile.model.PasswordHash
