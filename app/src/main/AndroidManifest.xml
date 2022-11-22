@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FixurfoneMobile">
         <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
             android:name=".AboutUs"
             android:exported="false" />
         <activity

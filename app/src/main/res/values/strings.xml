@@ -38,4 +38,10 @@
     <string name="device_infomation">Device Infomation</string>
     <string name="device_list">Device List</string>
     <string name="powered_by">Powered By</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_email">Enter email</string>
+    <string name="address">Address</string>
 </resources>

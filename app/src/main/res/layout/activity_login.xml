@@ -115,6 +115,19 @@
                 app:cornerRadius="@dimen/medium_padding" />
 
 
+            <TextView
+                android:id="@+id/signupBtn"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:text="@string/sign_up"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                app:cornerRadius="@dimen/medium_padding" />
+
+
+
 
         </LinearLayout>
     </FrameLayout>
