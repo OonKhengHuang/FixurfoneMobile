@@ -12,12 +12,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.DatePicker
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
+import com.example.fixurfonemobile.database.DiagnoseDB
 import com.example.fixurfonemobile.database.ReservationDB
 import com.example.fixurfonemobile.databinding.FragmentAddReservationBinding
 import com.example.fixurfonemobile.model.Device
@@ -105,7 +104,7 @@ class AddReservation : Fragment() {
 
         })
 
-        val selectTime = arrayOf("10.00 AM - 12.00 PM","12.00 PM - 2.00 PM","2.00 PM - 4.00 PM","4.00 PM - 6.00 PM")
+        val selectTime = arrayOf("10:00 AM","12:00 PM","2:00 PM","4:00 PM")
 
         val spinner = binding.spinner
         val arrayAdapter = ArrayAdapter<String>(this.requireContext(),android.R.layout.simple_spinner_dropdown_item,selectTime)
@@ -169,9 +168,23 @@ class AddReservation : Fragment() {
                 var db = ReservationDB()
                 db.addReservation(reserve)
                 val intent = Intent(activity, MainActivity::class.java)
+
+                //************************************* Dialog ********************************************************
+                val view = View.inflate(this.requireActivity(), R.layout.reservation_success_dialog, null)
+                val builder = AlertDialog.Builder(this.requireActivity())
+                builder.setView(view)
+
+                val dialog = builder.create()
+                dialog.show()
+                dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+                var btnCancel: Button = view.findViewById(R.id.btn_cancel)
                 Toast.makeText(this.requireActivity(),"Reservation Added successful", Toast.LENGTH_SHORT).show()
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(intent)
+                btnCancel.setOnClickListener{
+                    dialog.dismiss()
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    startActivity(intent)
+                }
+
 
             }
 

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1145" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/ic_baseline_android_24.xml" value="0.236" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.236" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.236" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/icon.xml" value="0.236" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/drawable/passwordicon.xml" value="0.236" />
@@ -27,7 +28,9 @@
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/fragment_record.xml" value="0.21965579710144928" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/fragment_reservation_list.xml" value="0.264" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/record_list_item.xml" value="0.4" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/request_repair_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/reservation_list_item.xml" value="0.1" />
+        <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/layout/reservation_success_dialog.xml" value="0.2" />
         <entry key="..\:/Users/TUF/AndroidStudioProjects/FixurfoneMobile/app/src/main/res/menu/bottom_navigation.xml" value="0.25416666666666665" />
       </map>
     </option>
