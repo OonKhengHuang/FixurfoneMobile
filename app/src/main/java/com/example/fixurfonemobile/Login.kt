@@ -56,7 +56,7 @@ class Login : AppCompatActivity() {
                             {
                                 var custData = v.getValue(Customer::class.java)
                                 var passbyte = password.trim() + custData?.salt
-                                if(custData?.email == email.trim() && custData?.password == hash.encryptSHA(passbyte)){
+                                if(custData?.email == email.trim().lowercase() && custData?.password == hash.encryptSHA(passbyte)){
                                     custID = custData.custID!!
                                 }
                             }
